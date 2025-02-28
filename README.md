@@ -8,3 +8,6 @@ If we want to get even more complicated, we can bin the chickens according to th
 
 # Chicken data
 The data for this paper can be found in the folder That-s-a-BigAss-Chicken Data: The the file contains the original data file Chickweight.csv. The orginal data file can be found here  https://www.kaggle.com/datasets/lsind18/weight-vs-age-of-chicks-on-different-diets/data
+
+## Images 
+The images used for this paper can be found in the folder That-s-a-BigAss- Chicken Images
