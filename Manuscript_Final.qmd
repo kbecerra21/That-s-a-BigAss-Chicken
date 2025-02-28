@@ -2,42 +2,7 @@
 title: "That-s-a-BigAss-Chicken"
 shorttitle: "Example apaquarto manuscript"
 author:
-  - name: W. Joel Schneider
-    corresponding: true
-    orcid: 0000-0002-8393-5316
-    email: schneider@temple.edu
-    affiliations:
-      - name: Temple University
-        department: College of Education and Human Development
-        address: 1301 Cecil B. Moore Ave.
-        city: Philadelphia
-        region: PA
-        postal-code: 19122-6091
-    role:
-      - writing
-      - conceptualization
-  - name: Fulano Zutano Mengano
-    affiliations: Universidad de Dondequiera
-    orcid: 0000-0000-0000-0001
-    role:
-      - formal anlaysis
-      - visualization
-      - editin
-  - name: Thomas Richard Harris
-    affiliations: 
-      - name: Generic State University
-        department: Department of Scholarly Studies
-    orcid: 0000-0000-0000-0002
-    role:
-      - editing
-      - funding acquistion
-  - name: Wut C. Whosis
-    affiliations: Whatchama College
-    orcid: 0000-0000-0000-0003
-    role:
-      - software
-      - methodology
-      - editing
+ 
 - name: Natalie Dowling
 corresponding: true
 orcid: 0000-0002-7190-1979
@@ -56,42 +21,23 @@ many more options. The body of the notebook includes markdown text and code
 chunks, and references can be included using a BibTeX file. When the document is
 rendered, the output will be rendered in APA style."
 keywords: [quarto, tutorials, R language]
-a u t h o r - n o t e :
-d i s c l o s u r e s :
-conflict of interest: The author has no conflict of interest to declare.
-references. bib # create a b i b file in the root directory of your
-project
-f o r m a t :
-#apaquarto-docx: default # you can render your project in html, doc, and/or pdf
-apaquarto-html: default
-comment out some as you're working and don't need them
-format: pdf
+author-note:
+  disclosures:
+    conflict of interest: The author has no conflict of interest to declare.
+bibliography: # create a bib file in the root directory of your project
+format:
+  #apaquarto-docx: default 
+  apaquarto-html: default    # remember to reverse commenting out other formats
+  apaquarto-pdf: default
 ---
 
 ```{r}
-setwd("/Users/kristenjohnson/KristenWorkingDirectory/That-s-a-BigAss-Chicken/temp")
-quarto::quarto_use_template("wjschne/apaquarto", no_prompt
-= TRUE)
+
+
 ```
 
+Chickens are pretty great [@elkhoraibiBackyardChickensUnited2014; @fischerDefenceBackyardChickens2019; @schindlerBackyardChickensFrontYard].
 
-## Quarto
+/clear
+# References
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r}
-1 + 1
-```
-
-You can add options to executable code like this 
-
-```{r}
-#| echo: false
-2 * 2
-```
-
-The `echo: false` option disables the printing of code (only output is displayed).
