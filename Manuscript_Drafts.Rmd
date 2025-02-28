@@ -4,7 +4,19 @@ author: "Kristen Johnson"
 date: "2025-02-28"
 output: html_document
 ---
-
+author:
+  - name: Karen Veronica Becerra
+    orcid:0009-0006-4967-0955
+    email: kvbecerra@Uchicago.edu 
+    affiliations:
+      - name: The University of Chicago 
+        department: Division of the Social Sciences Psychology 
+        address: 5801 S Ellis Ave
+        city: Chicago
+        region: IL
+        country: USA
+        postal-code: 60637
+        
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -24,4 +36,10 @@ Introduction
 Backyard chicken keeping has surged in popularity in recent years, driven by a desire for sustainable food production, self-sufficiency, and ethical animal husbandry (_______CITE_________). While much of the existing literature focuses on small and medium-sized breeds, large chicken breeds—such as Brahmas, Jersey Giants, and Orpingtons—offer unique advantages and challenges for backyard poultry enthusiasts. These birds often provide higher egg production, greater meat yield, and a more docile temperament, making them attractive to small-scale farmers and homesteaders (_______CITE_________). However, their size also necessitates specialized care, including adjustments in nutrition, housing, and health management.  
 Despite the growing interest in raising large chickens in non-commercial settings, research remains limited on how backyard keepers manage the specific needs of these birds. Understanding the factors that contribute to their well-being—such as space requirements, dietary considerations, and health monitoring—is crucial for promoting sustainable and humane poultry practices. Furthermore, the motivations, experiences, and challenges of backyard chicken keepers remain underexplored, particularly regarding the balance between productivity and ethical care (_______CITE_________).  
 This study employs a mixed methods approach to examine the care and management of large chicken breeds in backyard settings. Using surveys and interviews with backyard poultry keepers, alongside observational data on bird health and environmental conditions, we aim to identify best practices and common challenges in raising these birds. By integrating qualitative and quantitative data, this research seeks to provide a comprehensive understanding of how backyard poultry keepers navigate the complexities of raising large chickens. The findings will contribute to the broader discourse on sustainable animal husbandry and inform best practices for individuals seeking to maintain healthy, productive backyard flocks. 
-
+Abstract
+Introduction 
+Current study 
+Methods
+Results 
+Discussion 
+References 
