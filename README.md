@@ -1,4 +1,4 @@
-# That's a Big Ass Chicken
+# That's a Big-Ass Chicken
 Mini project chicken data analysis 
 
 # Chicken analysis plan
