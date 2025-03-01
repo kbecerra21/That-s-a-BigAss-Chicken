@@ -1,10 +1,11 @@
 ---
-title: "That’s a BigAss Chicken: Care and Managementof Large Chicken Breeds for Optimal Health and Productivity"
-shorttitle: "That-s-a-BigAss-Chicken"
+title: "That’s a Big-Ass Chicken: Care and Management of Large Chicken Breeds for Optimal Health and Productivity"
+shorttitle: "That's a Big-Ass Chicken"
 author:
   - name: Karen Veronica Becerra
     orcid: 0009-0006-4967-0955
     email: kvbecerra@Uchicago.edu 
+    corresponding: true
     affiliations:
       - name: The University of Chicago 
         department: Department of Psychology 
@@ -13,56 +14,102 @@ author:
         region: IL
         country: USA
         postal-code: 60637
+        id: uchicago
     role:
+      - conceptualization
+      - formal anlaysis
       - methodology
-      - editing
+      - project administration
+      - software
+      - visualization
+      - editing 
   - name: Kristen M. Johnson
     orcid: 0009-0008-3757-5795
     email: kmjohnson25@uchicago.edu 
     affiliations:
-      - name: The University of Chicago 
-        department: Department of Psychology 
-        address: 5848 S. University Avenue
-        city: Chicago
-        region: IL
-        country: USA
-        postal-code: 60637
+      - ref: uchicago
     role:
-      - writing
       - conceptualization
-- name: Michael Moroz
+      - data curation
+      - methodology
+      - project administration
+      - software
+      - writing
+      - editing
+  - name: Michael Moroz
     orcid: 0009-0000-9772-0001
     email: mrmoroz@uchicago.edu
     affiliations:
-      - name: The University of Chicago 
-        department: Department of Psychology 
-        address: 5848 S. University Avenue
-        city: Chicago
-        region: IL
-        country: USA
-        postal-code: 60637
+      - ref: uchicago
     role:
       - formal anlaysis
+      - software
       - visualization
-
+      - editing
 abstract: "This study investigates the growing phenomenon of backyard chicken keeping in urban and suburban environments, a practice that has gained significant momentum amid rising commercial egg prices. Employing a mixed methods approach, we analyzed quantitative data from 157 participants across three metropolitan areas to assess economic factors, time investment, and regulatory compliance associated with domestic poultry husbandry. Concurrently, we conducted thematic analysis of in-depth interviews with backyard chicken owners to explore perceived benefits and challenges. Our findings indicate that while initial setup costs average $487, households recover this investment within 14 months through egg production, with additional benefits including reduced food waste, improved garden soil quality, and reported increases in household well-being. Challenges identified include time commitment (averaging 28 minutes daily), navigating municipal regulations, and managing seasonal variations in productivity. Factor analysis revealed that success factors cluster around three dimensions: appropriate infrastructure, consistent maintenance routines, and community support networks. Ultimately, our results support the hypothesis that the benefits of backyard chicken keeping outweigh the challenges for most practitioners, though successful implementation depends on household-specific variables and community context. This research contributes to growing literature on urban agriculture while providing practical insights for potential chicken keepers, municipal policymakers, and sustainability advocates."
 keywords: [chickens, backyard, eggs, pros and cons]
 author-note:
   disclosures:
     conflict of interest: The authors have no conflict of interest to declare.
-bibliography: # create a bib file in the root directory of your project
-format:
+  financial-support: "This study was supported by Grant from The International Society for Fowl Language."
+  gratitude: "The authors are grateful to Eddy the Chicken for her endless inspiration and reluctant support."
+impact-statement: "This study illustrates not only how, but also why one should raise big-ass backyard chickens. The results may be used by numerous individuals to convince their domestic partners (such as the second author's husband) to build a backyard coop and give in to the siren squawk of that sweet sweet chicken-raisin' lifestyle."
+bibliography: That-s-a-BigAss-Chicken.bib
+floatsintext: true
+documentmode: man
+donotrepeattitle: true
+fontsize: 12pt
   #apaquarto-docx: default 
-  apaquarto-html: default    # remember to reverse commenting out other formats
-  apaquarto-pdf: default
+apaquarto-html: default    # remember to reverse commenting out other formats when turning project in
+  #apaquarto-pdf: default
 ---
 
-```{r}
 
+```{r, echo=FALSE}
+
+# Where we will load all of the necessary libraries etc.
 
 ```
 
-```{r data-analysis, echo=FALSE}
+> *If you've ever seen a picture of Eddy the Chicken, your first words would invariably be "That's a Big-Ass Chicken!" And you would be correct. See Figure 1 for reference.*
+
+```{r}
+#![Eddy the Chicken](sampleimage.png){
+  #fig-myimportedimage 
+ # width="5in" 
+ # fig-alt="A picture of Eddy the Chicken being a Big-Ass Chicken on the shoulder of the first author's sister." 
+ # apa-note="This is a Big-Ass Chicken."
+ # }
+```
+
+In recent decades, the practice of maintaining domestic poultry within urban and suburban residential settings has experienced a notable resurgence [cite]. This phenomenon, colloquially referred to as "backyard chicken keeping," represents a fascinating intersection of agricultural tradition and contemporary sustainability movements. The economic landscape has further accelerated this trend, as inflated egg prices have prompted an increasing number of households to consider domestic poultry as a pragmatic response to marketplace volatility [cite]. Indeed, consumer data suggests that the correlation between rising commercial egg costs and the purchase of chicken coops is remarkably robust.
+
+[paragraph about why bigger is better, with regards to egg production and everything else]
+
+Previous studies have largely focused either on large-scale commercial poultry operations or on historical agricultural practices.  While proponents extol the virtues of fresh eggs and animated garden assistants, detractors cite concerns ranging from zoonotic disease transmission to neighborhood noise pollution---a concern that anyone who has experienced a rooster's enthusiasm for announcing dawn can readily appreciate. Surprisingly, of those studies that do consider the costs and benefits of backyard chicken keeping, none that to the authors knowledge look into the phenomenon of the Big-Ass Chicken (BAC). This study aims to fill that obvious (and sizeable) gap.
+
+# Current Study
+Our research design employs a mixed methods approach to develop a nuanced understanding of this increasingly common practice. The methodology combines quantitative data analysis examining multiple factors related to Big-Ass backyard chicken husbandry---including analysis of factors related to chicken size and egg production---with qualitative thematic analysis of an in-depth interviews conducted with chicken owners of BAC's. By triangulating these methodological approaches, we aspire to move beyond anecdotal evidence and develop an empirically robust understanding of what might be termed the "net hennefit" of backyard chicken husbandry in contemporary urban contexts. The present study thus investigates the hypothesis that the benefits of maintaining a small flock of Gallus gallus domesticus (see Figure 2) in residential settings significantly outweigh the associated challenges and drawbacks.
+
+![Gallus gallus domesticus](orpington chicken.jfif){
+  #fig-orpington-chicken
+  width="5in" 
+  fig-alt="A picture of a common backyard chicken." 
+  apa-note="Also known as the orpinton chicken."
+  }
+
+
+# Method
+
+## Participants
+
+## Procedure
+
+## Measures
+
+# Results
+
+```{r, echo=FALSE}
 
 #| label: data-analysis
 
@@ -132,9 +179,6 @@ ggplot(chicken_data, aes(x = Time, y = Weight, color = Diet, group = Diet)) + ge
 ```
 
 
+# Discussion
 
-Chickens are pretty great [@elkhoraibiBackyardChickensUnited2014; @fischerDefenceBackyardChickens2019; @schindlerBackyardChickensFrontYard].
-
-/clear
 # References
-
