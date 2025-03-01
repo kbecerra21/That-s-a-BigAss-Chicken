@@ -31,8 +31,8 @@ author:
       - writing
       - conceptualization
 - name: Michael Moroz
-    orcid: 
-    email:  mrmoroz@uchicago.edu
+    orcid: 0009-0000-9772-0001
+    email: mrmoroz@uchicago.edu
     affiliations:
       - name: The University of Chicago 
         department: Department of Psychology 
@@ -61,6 +61,77 @@ format:
 
 
 ```
+
+```{r data-analysis, echo=FALSE}
+
+#| label: data-analysis
+
+## Reading the data 
+
+library(readr)
+
+chicken_data = read.csv("Data_BigAssChicken/ChickWeight.csv")
+
+# head(chicken_data)
+
+## Removing the 'X' column (it's extra and doesn't need to be in the data frame)
+
+require(tidyverse)
+
+chicken_data = as_tibble(chicken_data)
+
+chicken_data = chicken_data %>%
+  select((-c(X)))
+
+head(chicken_data)
+
+## Changing the 'weight' column name to 'Weight' so everything remains consistent in terms of capitalization
+
+chicken_data = chicken_data %>%
+  rename(Weight = weight)
+
+## Making the first plot (weight on the y-axis, time on the x-axis, line plots grouped by chicken ID (meaning each chicken will have its own colour on the line plot))
+
+library(ggplot2)
+
+ggplot(chicken_data, aes(x = Time, y = Weight, colour = Chick, group = Chick)) + geom_line() + labs(x = "Time (days since birth)", y = "Weight (grams)", title = "Figure 1: Plot of Chicken Growth") + theme_minimal()
+
+## Ok now we have visualized the different growth trends of the various chickens. Now we probably want to look at how diet might factor into this trend. First let's calculate the mean growth rates of all the various chickens according to diet (rated 1 to 4)
+
+## Basic mathematical premise: end - start / start gives us the growth rate for a single period. Then we just add all the individual growth rates and divide by the number of periods
+
+chicken_data = chicken_data %>%
+  arrange(Chick, Time) %>%
+  group_by(Chick) %>%
+  mutate(GrowRate = (Weight - first(Weight)) / (Time - first(Time))) %>%
+  ungroup()
+
+## Now analyzing with diets
+
+dGrowRate = chicken_data %>%
+  group_by(Diet) %>%
+  summarise(meanGrowRate = mean(GrowRate, na.rm = TRUE))
+
+print(dGrowRate)
+
+## Ok so now we see that diet 3 has chickens with the highest mean growth rates (per day). Diet 4 comes in second, then diet 2, then diet 1. Let's visualize everything in a ggplot.
+
+ggplot(dGrowRate, aes(x = Diet, y = meanGrowRate, fill = Diet)) + geom_bar(stat = "identity") + labs(x = "Diet", y = "Mean Growth Rate", title = "Figure 2: Mean Growth Rate Bar Plot (rate per day)") + theme_minimal()
+
+## So if we are to infer that diet is a good predictor of growth rates (obviously in addition to time), we should see diet as a significant predictor of weight in a linear regression. Let's try that now. 
+
+lmWeight = lm(Weight ~ Time + Diet, data = chicken_data)
+summary(lmWeight)
+
+## So we see that both time and diet are significant predictors of weight. Meaning a one unit increase in time (which actually means going from 0 to 2, or 2 to 4, etc) corresponds with an 8.77 gram increase in weight. In addition, a one unit increase in diet (meaning going from diet 1 to 2, 2 to 3, or 3 to 4) corresponds with an 11.78 gram increase in weight. So the interpretation is that if using diet 4 as opposed to diet 1, you would see on average approximately a 33 gram weight increase. 
+
+## Finally, plotting the regression
+
+ggplot(chicken_data, aes(x = Time, y = Weight, color = Diet, group = Diet)) + geom_point() + geom_smooth(method = "lm", se = FALSE) + labs(x = "Time (days since birth)", y = "Weight (grams)", color = "Diet", title = "Figure 3: Regression of Weight on Time by Diet")
+
+```
+
+
 
 Chickens are pretty great [@elkhoraibiBackyardChickensUnited2014; @fischerDefenceBackyardChickens2019; @schindlerBackyardChickensFrontYard].
 
