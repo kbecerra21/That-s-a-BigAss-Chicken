@@ -1,6 +1,6 @@
 ---
-title: "That-s-a-BigAss-Chicken"
-shorttitle: "Example apaquarto manuscript"
+title:“That’s a BigAss Chicken:  Care and Management of Large Chicken Breeds for Optimal Health and Productivity”
+shorttitle: " "That-s-a-BigAss-Chicken"
 author:
   - name: Karen Veronica Becerra
     orcid: 0009-0006-4967-0955
