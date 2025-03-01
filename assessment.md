@@ -424,7 +424,7 @@ You are not required to demonstrate these objectives in your independent project
 If you believe you have demonstrated any of the above skills sufficiently to count toward the 20 additional objectives-based points, please indicate which objective(s) you believe you have met and provide a brief explanation of how you have met each objective.
 
 <!-- Explanation of demonstrated unassessed objectives below this line -->
-
+We integrated bibTeX with Zotero to render APA7 in-text citations. 
 
 <!-- Explanation of demonstrated unassessed objectives above this line -->
 
