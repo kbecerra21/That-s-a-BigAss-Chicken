@@ -125,7 +125,7 @@ summary(lmWeight)
 
 ## So we see that both time and diet are significant predictors of weight. Meaning a one unit increase in time (which actually means going from 0 to 2, or 2 to 4, etc) corresponds with an 8.77 gram increase in weight. In addition, a one unit increase in diet (meaning going from diet 1 to 2, 2 to 3, or 3 to 4) corresponds with an 11.78 gram increase in weight. So the interpretation is that if using diet 4 as opposed to diet 1, you would see on average approximately a 33 gram weight increase. 
 
-## Finally, plotting the regression
+## Finally, plotting the regression.
 
 ggplot(chicken_data, aes(x = Time, y = Weight, color = Diet, group = Diet)) + geom_point() + geom_smooth(method = "lm", se = FALSE) + labs(x = "Time (days since birth)", y = "Weight (grams)", color = "Diet", title = "Figure 3: Regression of Weight on Time by Diet")
 
