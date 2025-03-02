@@ -67,8 +67,10 @@ apaquarto-pdf: default
 
 
 ```{r, echo=FALSE}
-
-# Where we will load all of the necessary libraries etc.
+# Load necessary libraries
+library(readr)
+library(tidyverse)
+library(ggplot2)
 
 ```
 
