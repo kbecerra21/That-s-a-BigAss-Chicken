@@ -72,10 +72,10 @@ apaquarto-pdf: default
 
 ```
 
-> *If you've ever seen a picture of Edgar the Chicken, your first words would invariably be "That's a Big-Ass Chicken!" And you would be correct. See Figure 1 for reference.*
+> *If you've ever seen a picture of Pechugas the Chicken, your first words would invariably be "That's a Big-Ass Chicken!" And you would be correct. See Figure 1 for reference.*
 
 ```{r, echo=FALSE}
-#![Edgar the Chicken](orpignton hen(edgar).jpg){
+#![Edgar the Chicken](orpgton rooster.jpg){
   #fig-myimportedimage 
  # width="5in" 
  # fig-alt="A picture of Eddy the Chicken being a Big-Ass Chicken on the shoulder of the first author's sister." 
