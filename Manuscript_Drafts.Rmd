@@ -36,13 +36,17 @@ Introduction
 Backyard chicken keeping has surged in popularity in recent years, driven by a desire for sustainable food production, self-sufficiency, and ethical animal husbandry (_______CITE_________). While much of the existing literature focuses on small and medium-sized breeds, large chicken breeds—such as Brahmas, Jersey Giants, and Orpingtons—offer unique advantages and challenges for backyard poultry enthusiasts. These birds often provide higher egg production, greater meat yield, and a more docile temperament, making them attractive to small-scale farmers and homesteaders (_______CITE_________). However, their size also necessitates specialized care, including adjustments in nutrition, housing, and health management.  
 Despite the growing interest in raising large chickens in non-commercial settings, research remains limited on how backyard keepers manage the specific needs of these birds. Understanding the factors that contribute to their well-being—such as space requirements, dietary considerations, and health monitoring—is crucial for promoting sustainable and humane poultry practices. Furthermore, the motivations, experiences, and challenges of backyard chicken keepers remain underexplored, particularly regarding the balance between productivity and ethical care (_______CITE_________).  
 This study employs a mixed methods approach to examine the care and management of large chicken breeds in backyard settings. Using surveys and interviews with backyard poultry keepers, alongside observational data on bird health and environmental conditions, we aim to identify best practices and common challenges in raising these birds. By integrating qualitative and quantitative data, this research seeks to provide a comprehensive understanding of how backyard poultry keepers navigate the complexities of raising large chickens. The findings will contribute to the broader discourse on sustainable animal husbandry and inform best practices for individuals seeking to maintain healthy, productive backyard flocks. 
-Abstract
-Introduction 
-Current study 
-narratives of chicken keeping
+
+
+# narratives of chicken keeping
 A day of taking care of chickens
 The day starts at around 7am for most of the group except for Edgar the chicken who has a later start to her morning. I own 5 chickens 3 roosters and 2 hens and they all have their own personalities and routines. Once everyone is up they are told good morning and given fresh water and food. Their breakfast consists of high protein grains and for the hens they are given a calcium supplement or layer pallets to help with egg production. After breakfast, the chickens are let out of their coop to roam around the yard. In my Georgia home we have about a football field worth of space for them to run around in .They are given a few hours to roam around and forage for bugs and other treats.During the colder months they are given mealworms for extra protein.They also have occasional fun treats such as blueberries, cucumbers and watermelon when in season. They are able to go in and out the coop to the run around the plot as they please. The 
+
+
+
+
 Methods
+
 Results 
 Discussion 
 References 
