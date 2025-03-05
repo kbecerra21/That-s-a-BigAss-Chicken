@@ -54,7 +54,7 @@ author-note:
   financial-support: "This study was supported by Grant from The International Society for Fowl Language."
   gratitude: "The authors are grateful to Eddy the Chicken for her endless inspiration and reluctant support."
 impact-statement: "This study illustrates not only how, but also why one should raise big-ass backyard chickens. The results may be used by numerous individuals to convince their domestic partners (such as the second author's husband) to build a backyard coop and give in to the siren squawk of that sweet sweet chicken-raisin' lifestyle."
-bibliography: That-s-a-BigAss-Chicken.bib
+bibliography: Chickens.bib
 floatsintext: true
 documentmode: man
 donotrepeattitle: true
