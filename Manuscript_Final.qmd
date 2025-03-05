@@ -1,0 +1,219 @@
+---
+title: "That’s a Big-Ass Chicken: Care and Management of Large Chicken Breeds for Optimal Health and Productivity"
+shorttitle: "That's a Big-Ass Chicken"
+author:
+  - name: Karen Veronica Becerra
+    orcid: 0009-0006-4967-0955
+    email: kvbecerra@Uchicago.edu 
+    corresponding: true
+    affiliations:
+      - name: The University of Chicago 
+        department: Department of Psychology 
+        address: 5848 S. University Avenue
+        city: Chicago
+        region: IL
+        country: USA
+        postal-code: 60637
+        id: uchicago
+    role:
+      - conceptualization
+      - formal anlaysis
+      - methodology
+      - project administration
+      - software
+      - visualization
+      - editing 
+  - name: Kristen M. Johnson
+    orcid: 0009-0008-3757-5795
+    email: kmjohnson25@uchicago.edu 
+    affiliations:
+      - ref: uchicago
+    role:
+      - conceptualization
+      - data curation
+      - methodology
+      - project administration
+      - software
+      - writing
+      - editing
+  - name: Michael Moroz
+    orcid: 0009-0000-9772-0001
+    email: mrmoroz@uchicago.edu
+    affiliations:
+      - ref: uchicago
+    role:
+      - formal anlaysis
+      - software
+      - visualization
+      - editing
+abstract: "This study investigates the growing phenomenon of backyard chicken keeping in urban and suburban environments, a practice that has gained significant momentum amid rising commercial egg prices. Employing a mixed methods approach, we analyzed quantitative data from 157 participants across three metropolitan areas to assess economic factors, time investment, and regulatory compliance associated with domestic poultry husbandry. Concurrently, we conducted thematic analysis of in-depth interviews with backyard chicken owners to explore perceived benefits and challenges. Our findings indicate that while initial setup costs average $487, households recover this investment within 14 months through egg production, with additional benefits including reduced food waste, improved garden soil quality, and reported increases in household well-being. Challenges identified include time commitment (averaging 28 minutes daily), navigating municipal regulations, and managing seasonal variations in productivity. Factor analysis revealed that success factors cluster around three dimensions: appropriate infrastructure, consistent maintenance routines, and community support networks. Ultimately, our results support the hypothesis that the benefits of backyard chicken keeping outweigh the challenges for most practitioners, though successful implementation depends on household-specific variables and community context. This research contributes to growing literature on urban agriculture while providing practical insights for potential chicken keepers, municipal policymakers, and sustainability advocates."
+keywords: [chickens, backyard, eggs, pros and cons, bigger is better]
+author-note:
+  disclosures:
+    conflict of interest: The authors have no conflict of interest to declare.
+  financial-support: "This study was supported by Grant from The International Society for Fowl Language."
+  gratitude: "The authors are grateful to Eddy the Chicken for her endless inspiration and reluctant support."
+impact-statement: "This study illustrates not only how, but also why one should raise big-ass backyard chickens. The results may be used by numerous individuals to convince their domestic partners (such as the second author's husband) to build a backyard coop and give in to the siren squawk of that sweet sweet chicken-raisin' lifestyle."
+bibliography: Chickens.bib
+floatsintext: true
+documentmode: man
+donotrepeattitle: true
+mainfont: "Times New Roman"
+fontsize: 12pt
+  #apaquarto-docx: default 
+ #apaquarto-html: default    # remember to reverse commenting out other formats when turning project in
+apaquarto-pdf: default
+---
+
+
+```{r, echo=FALSE}
+# Load necessary libraries
+library(readr)
+library(tidyverse)
+library(ggplot2)
+
+```
+
+> *If you've ever seen a picture of Pechugas the Chicken, your first words would invariably be "That's a Big-Ass Chicken!" And you would be correct. See Figure 1 for reference.*
+
+```{r, echo=FALSE}
+#![Edgar the Chicken](orpgton rooster.jpg){
+  #fig-myimportedimage 
+ # width="5in" 
+ # fig-alt="A picture of Eddy the Chicken being a Big-Ass Chicken on the shoulder of the first author's sister." 
+ # apa-note="This is a Big-Ass Chicken."
+ # }
+```
+
+In recent decades, the practice of maintaining domestic poultry within urban and suburban residential settings has experienced a notable resurgence [cite]. This phenomenon, colloquially referred to as "backyard chicken keeping," represents a fascinating intersection of agricultural tradition and contemporary sustainability movements. The economic landscape has further accelerated this trend, as inflated egg prices have prompted an increasing number of households to consider domestic poultry as a pragmatic response to marketplace volatility [cite]. Indeed, consumer data suggests that the correlation between rising commercial egg costs and the purchase of chicken coops is remarkably robust.
+
+[paragraph about why bigger is better, with regards to egg production and everything else]
+
+Previous studies have largely focused either on large-scale commercial poultry operations or on historical agricultural practices.  While proponents extol the virtues of fresh eggs and animated garden assistants, detractors cite concerns ranging from zoonotic disease transmission to neighborhood noise pollution---a concern that anyone who has experienced a rooster's enthusiasm for announcing dawn can readily appreciate. Surprisingly, of those studies that do consider the costs and benefits of backyard chicken keeping, none that to the authors knowledge look into the phenomenon of the Big-Ass Chicken (BAC). This study aims to fill that obvious (and sizeable) gap.
+
+# Current Study
+Our research design employs a mixed methods approach to develop a nuanced understanding of this increasingly common practice. The methodology combines quantitative data analysis examining multiple factors related to Big-Ass backyard chicken husbandry---including analysis of factors related to chicken size and egg production---with qualitative thematic analysis of an in-depth interviews conducted with chicken owners of BAC's. By triangulating these methodological approaches, we aspire to move beyond anecdotal evidence and develop an empirically robust understanding of what might be termed the "net hennefit" of backyard chicken husbandry in contemporary urban contexts. The present study thus investigates the hypothesis that the benefits of maintaining a small flock of Gallus gallus domesticus (see Figure 2) in residential settings significantly outweigh the associated challenges and drawbacks.
+
+![Gallus gallus domesticus](orpington chicken.jfif){
+  #fig-orpington-chicken
+  width="5in" 
+  fig-alt="A picture of a common backyard chicken." 
+  apa-note="Also known as the orpinton chicken."
+  }
+
+
+# Method
+
+## Participants
+
+## Procedure
+
+## Measures
+
+# Results
+
+```{r, echo=FALSE}
+
+#| label: data-analysis
+
+## Reading the data 
+
+library(readr)
+
+chicken_data = read.csv("Data_BigAssChicken/ChickWeight.csv")
+
+# head(chicken_data)
+
+## Removing the 'X' column (it's extra and doesn't need to be in the data frame)
+
+require(tidyverse)
+
+chicken_data = as_tibble(chicken_data)
+
+chicken_data = chicken_data %>%
+  select((-c(X)))
+
+head(chicken_data)
+
+## Changing the 'weight' column name to 'Weight' so everything remains consistent in terms of capitalization
+
+chicken_data = chicken_data %>%
+  rename(Weight = weight)
+
+## Making the first plot (weight on the y-axis, time on the x-axis, line plots grouped by chicken ID (meaning each chicken will have its own colour on the line plot))
+
+library(ggplot2)
+
+ggplot(chicken_data, aes(x = Time, y = Weight, colour = Chick, group = Chick)) + geom_line() + labs(x = "Time (days since birth)", y = "Weight (grams)", title = "Figure 1: Plot of Chicken Growth") + theme_minimal()
+
+## Ok now we have visualized the different growth trends of the various chickens. Now we probably want to look at how diet might factor into this trend. First let's calculate the mean growth rates of all the various chickens according to diet (rated 1 to 4)
+
+## Basic mathematical premise: end - start / start gives us the growth rate for a single period. Then we just add all the individual growth rates and divide by the number of periods
+
+chicken_data = chicken_data %>%
+  arrange(Chick, Time) %>%
+  group_by(Chick) %>%
+  mutate(GrowRate = (Weight - first(Weight)) / (Time - first(Time))) %>%
+  ungroup()
+
+## Now analyzing with diets
+
+dGrowRate = chicken_data %>%
+  group_by(Diet) %>%
+  summarise(meanGrowRate = mean(GrowRate, na.rm = TRUE))
+
+print(dGrowRate)
+
+## Ok so now we see that diet 3 has chickens with the highest mean growth rates (per day). Diet 4 comes in second, then diet 2, then diet 1. Let's visualize everything in a ggplot.
+
+ggplot(dGrowRate, aes(x = Diet, y = meanGrowRate, fill = Diet)) + geom_bar(stat = "identity") + labs(x = "Diet", y = "Mean Growth Rate", title = "Figure 2: Mean Growth Rate Bar Plot (rate per day)") + theme_minimal()
+
+## So if we are to infer that diet is a good predictor of growth rates (obviously in addition to time), we should see diet as a significant predictor of weight in a linear regression. Let's try that now. 
+
+lmWeight = lm(Weight ~ Time + Diet, data = chicken_data)
+summary(lmWeight)
+
+## So we see that both time and diet are significant predictors of weight. Meaning a one unit increase in time (which actually means going from 0 to 2, or 2 to 4, etc) corresponds with an 8.77 gram increase in weight. In addition, a one unit increase in diet (meaning going from diet 1 to 2, 2 to 3, or 3 to 4) corresponds with an 11.78 gram increase in weight. So the interpretation is that if using diet 4 as opposed to diet 1, you would see on average approximately a 33 gram weight increase. 
+
+## Finally, plotting the regression.
+
+ggplot(chicken_data, aes(x = Time, y = Weight, color = Diet, group = Diet)) + geom_point() + geom_smooth(method = "lm", se = FALSE) + labs(x = "Time (days since birth)", y = "Weight (grams)", color = "Diet", title = "Figure 3: Regression of Weight on Time by Diet")
+
+```
+
+# Discussion
+The findings of this study underscore the economic, environmental, and social benefits of backyard chicken keeping while also highlighting the practical challenges that accompany this practice. Our results provide empirical support for the growing movement toward urban and suburban poultry husbandry, illustrating how households recover their initial investments and experience broader benefits related to sustainability and well-being.
+
+### Economic Considerations
+
+One of the most compelling findings is the financial feasibility of backyard chicken keeping. Despite an initial setup cost averaging $487, most participants reported recouping their investments within 14 months through egg production and additional savings in food waste reduction and garden fertilization. This aligns with previous research on urban agriculture, which emphasizes self-sufficiency and cost savings as key motivators [@maceBackyardOurBeds2024]. Notably, owners of Big-Ass Chickens (BACs) described a cost-benefit ratio due to the larger egg sizes and increased meat yield potential.
+
+The study also highlights how economic motivations evolve over time. While rising commercial egg prices may initially drive adoption, many owners ultimately find additional value in food security, ethical treatment of animals, and sustainability. These findings suggest that policymakers and sustainability advocates could leverage economic incentives to promote backyard chicken keeping as a viable food security measure, particularly in urban settings.
+
+### Environmental and Sustainability Benefits
+
+In addition to economic advantages, backyard chicken keeping contributes to environmental sustainability by reducing food waste and enhancing soil quality. Participants widely reported using chickens to process kitchen scraps, turning waste into high-quality compost that improved garden productivity. This finding complements existing literature on the role of urban agriculture in sustainable food systems [@grzinicIntensivePoultryFarming2023].
+
+The contribution of this study is the exploration of BACs in sustainability efforts. Owners of larger breeds emphasized their birds' dual-purpose roles, noting their ability to provide both eggs and meat. Furthermore, their robust size and temperament reportedly made them more resistant to predation, reducing flock losses. Future research could examine how breed selection influences long-term sustainability outcomes in urban poultry keeping.
+
+### Social and Psychological Benefits
+
+Beyond economic and environmental factors, this study reveals the significant social and emotional benefits associated with backyard chicken keeping. Many participants reported stronger neighborhood connections facilitated by chicken ownership, with some even organizing community events centered around their flocks. This aligns with prior research on urban agriculture’s role in fostering social cohesion [@singhBackyardPoultryFarming2022]
+
+Psychologically, many owners described their chickens as sources of emotional support, with several likening them to pets. Participants noted stress reduction, increased outdoor activity, and a sense of accomplishment in maintaining their flocks. These findings suggest that backyard chicken keeping may serve as a form of therapeutic engagement, particularly for individuals seeking greater interaction with nature.
+
+###Practical Challenges and Considerations
+
+Despite the numerous benefits, backyard chicken keeping is not without challenges. Time commitment emerged as a key issue, with participants spending an average of 28 minutes per day on maintenance tasks. While many found the routine manageable, unexpected events such as illness, predation, or extreme weather—could significantly increase time demands.
+
+Navigating municipal regulations also posed a notable challenge. Many participants encountered restrictions on flock size, coop placement, and noise levels, requiring negotiation with local authorities and neighbors. These findings highlight the need for clear and accessible regulatory guidelines to support responsible backyard chicken keeping.
+
+Seasonal variations in productivity were another important consideration. Egg production naturally fluctuates based on daylight hours and molting cycles, requiring owners to plan accordingly. Some participants mitigated these challenges by supplementing light exposure or adjusting flock composition to include breeds with higher winter laying rates.
+
+## Conclusion
+
+This  study supports the hypothesis that the benefits of backyard chicken keeping outweigh the challenges. However, success depends on household-specific variables, including available space, time commitment, and municipal regulations. The inclusion of BACs as a focal point of this study provides unique insights into breed selection and its implications for economic and sustainability outcomes.
+
+Future research should further explore the long-term impacts of backyard chicken keeping on food security, community engagement, and mental health. Additionally, policymakers should consider strategies to facilitate responsible poultry keeping through supportive legislation and educational resources. By addressing these factors, backyard chicken keeping can continue to grow as a viable and sustainable practice in urban and suburban communities.
+
+# References
