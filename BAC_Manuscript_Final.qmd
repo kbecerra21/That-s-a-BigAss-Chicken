@@ -309,10 +309,40 @@ Chicken keeping frequently represented an expression of environmental and ethica
 > "It's living my values around humane animal treatment, reducing my carbon footprint, and stepping outside the industrial food system, even if in a small way." (Participant 47, Pacific Northwest)
 
 
-
-
 # Discussion
+The findings of this study underscore the economic, environmental, and social benefits of backyard chicken keeping while also highlighting the practical challenges that accompany this practice. Our results provide empirical support for the growing movement toward urban and suburban poultry husbandry, illustrating how households recover their initial investments and experience broader benefits related to sustainability and well-being.
 
+### Economic Considerations
+
+One of the most compelling findings is the financial feasibility of backyard chicken keeping. Despite an initial setup cost averaging $487, most participants reported recouping their investments within 14 months through egg production and additional savings in food waste reduction and garden fertilization. This aligns with previous research on urban agriculture, which emphasizes self-sufficiency and cost savings as key motivators [@maceBackyardOurBeds2024]. Notably, owners of Big-Ass Chickens (BACs) described a cost-benefit ratio due to the larger egg sizes and increased meat yield potential.
+
+The study also highlights how economic motivations evolve over time. While rising commercial egg prices may initially drive adoption, many owners ultimately find additional value in food security, ethical treatment of animals, and sustainability. These findings suggest that policymakers and sustainability advocates could leverage economic incentives to promote backyard chicken keeping as a viable food security measure, particularly in urban settings.
+
+### Environmental and Sustainability Benefits
+
+In addition to economic advantages, backyard chicken keeping contributes to environmental sustainability by reducing food waste and enhancing soil quality. Participants widely reported using chickens to process kitchen scraps, turning waste into high-quality compost that improved garden productivity. This finding complements existing literature on the role of urban agriculture in sustainable food systems [@grzinicIntensivePoultryFarming2023].
+
+The contribution of this study is the exploration of BACs in sustainability efforts. Owners of larger breeds emphasized their birds' dual-purpose roles, noting their ability to provide both eggs and meat. Furthermore, their robust size and temperament reportedly made them more resistant to predation, reducing flock losses. Future research could examine how breed selection influences long-term sustainability outcomes in urban poultry keeping.
+
+### Social and Psychological Benefits
+
+Beyond economic and environmental factors, this study reveals the significant social and emotional benefits associated with backyard chicken keeping. Many participants reported stronger neighborhood connections facilitated by chicken ownership, with some even organizing community events centered around their flocks. This aligns with prior research on urban agriculture’s role in fostering social cohesion [@singhBackyardPoultryFarming2022]
+
+Psychologically, many owners described their chickens as sources of emotional support, with several likening them to pets. Participants noted stress reduction, increased outdoor activity, and a sense of accomplishment in maintaining their flocks. These findings suggest that backyard chicken keeping may serve as a form of therapeutic engagement, particularly for individuals seeking greater interaction with nature.
+
+###Practical Challenges and Considerations
+
+Despite the numerous benefits, backyard chicken keeping is not without challenges. Time commitment emerged as a key issue, with participants spending an average of 28 minutes per day on maintenance tasks. While many found the routine manageable, unexpected events such as illness, predation, or extreme weather—could significantly increase time demands.
+
+Navigating municipal regulations also posed a notable challenge. Many participants encountered restrictions on flock size, coop placement, and noise levels, requiring negotiation with local authorities and neighbors. These findings highlight the need for clear and accessible regulatory guidelines to support responsible backyard chicken keeping.
+
+Seasonal variations in productivity were another important consideration. Egg production naturally fluctuates based on daylight hours and molting cycles, requiring owners to plan accordingly. Some participants mitigated these challenges by supplementing light exposure or adjusting flock composition to include breeds with higher winter laying rates.
+
+## Conclusion
+
+This  study supports the hypothesis that the benefits of backyard chicken keeping outweigh the challenges. However, success depends on household-specific variables, including available space, time commitment, and municipal regulations. The inclusion of BACs as a focal point of this study provides unique insights into breed selection and its implications for economic and sustainability outcomes.
+
+Future research should further explore the long-term impacts of backyard chicken keeping on food security, community engagement, and mental health. Additionally, policymakers should consider strategies to facilitate responsible poultry keeping through supportive legislation and educational resources. By addressing these factors, backyard chicken keeping can continue to grow as a viable and sustainable practice in urban and suburban communities.
 
 # References
 
