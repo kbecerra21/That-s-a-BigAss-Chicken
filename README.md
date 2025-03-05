@@ -1,4 +1,4 @@
-# That's a Big-Ass Chicken
+# That's a Big Ass Chicken
 Mini project chicken data analysis 
 
 # Chicken analysis plan
@@ -8,6 +8,9 @@ If we want to get even more complicated, we can bin the chickens according to th
 
 # Chicken data
 The data for this paper can be found in the folder Data_BigAssChicken : The the file contains the original data files Chickweight.csv and GallusGallusDomesticus.csv . The original ChickWeight.csv data file can be found here  https://www.kaggle.com/datasets/lsind18/weight-vs-age-of-chicks-on-different-diets. The original GallusGallusDomesticus.csv data file can be found here https://www.kaggle.com/datasets/phuzoman/egg-producing-chickens
+
+# Qualitaive data 
+The qualitative data for this paper can be found in the folder Qualitativedata_BigAssChicken. The file contains the BAC_Qualitavive-data.Rmd file that has the made up interview material used in this paper and the way that it was analyzed by themes. 
 
 ## Images 
 The images used for this paper can be found in the folder Images_BigAssChicken.
