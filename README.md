@@ -1,5 +1,7 @@
 # That's a Big Ass Chicken
 Mini project chicken data analysis 
+# Assessment md folder
+This folder has all of the collaborators assessment md docs for this project 
 # To see pdf 
 The official docs to render for pdf are have a label  that starts with BAC and are in the main page of this repo 
 # Chicken analysis plan
