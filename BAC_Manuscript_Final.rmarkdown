@@ -214,6 +214,184 @@ ggplot(chicken_weight, aes(x = Time, y = Weight, color = Diet, group = Diet)) +
 
 
 ## Eggs 
+```{r, echo=FALSE,include=FALSE}
+# Load necessary library
+set.seed(123)  # For reproducibility
+
+# Simulate chicken breeds
+breeds <- c("Leghorn", "Rhode Island Red", "Orpington", "Sussex", "Australorp")
+
+# Simulate egg sizes (larger eggs)
+egg_sizes <- c("Small", "Medium", "Large", "X-Large")
+
+# Simulate chicken weights (heavier chickens will lay larger eggs)
+weights <- seq(2.5, 6.5, by = 0.1)  # Chicken weights from 2.5 kg to 6.5 kg
+
+# Create fake data
+num_rows <- 100  # Number of data points
+chicken_data <- data.frame(
+  Chicken_ID = 1:num_rows,
+  Breed = sample(breeds, num_rows, replace = TRUE),
+  Weight = sample(weights, num_rows, replace = TRUE),  # Random chicken weights
+  Eggs_Laid = sample(150:300, num_rows, replace = TRUE)  # Number of eggs laid
+)
+
+# Simulate egg size based on weight (heavier chickens lay larger eggs)
+chicken_data$Egg_Size <- ifelse(chicken_data$Weight >= 5, 
+                                sample(c("Large", "X-Large"), num_rows, replace = TRUE, prob = c(0.6, 0.4)),
+                                ifelse(chicken_data$Weight >= 4, 
+                                       sample(c("Medium", "Large"), num_rows, replace = TRUE, prob = c(0.7, 0.3)),
+                                       sample(c("Small", "Medium"), num_rows, replace = TRUE, prob = c(0.5, 0.5)))
+)
+
+# Display the first few rows of the data
+head(chicken_data)
+
+# Save the chicken data to a CSV file
+write.csv(chicken_data, "chicken_egg_weight_data.csv", row.names = FALSE)
+
+```
+
+```{r, echo=FALSE, include=FALSE}
+# Load necessary library
+set.seed(123)  # Created fake data because we want Kristen to get chickens 
+
+# Load necessary library
+set.seed(123) 
+
+# Simulate chicken breeds
+breeds <- c("Leghorn", "Rhode Island Red", "Orpington", "Sussex", "Australorp") # my chickens are orpingtons so i included them 
+
+# Simulate egg sizes (larger eggs)
+egg_sizes <- c("Small", "Medium", "Large", "X-Large")
+
+# Simulate chicken weights (heavier chickens will lay larger eggs)
+weights <- seq(2.5, 6.5, by = 0.1)  # Chicken weights from 2.5 kg to 6.5 kg
+
+# Create fake data
+num_rows <- 100  # Number of data points
+chicken_data <- data.frame(
+  Chicken_ID = 1:num_rows,
+  Breed = sample(breeds, num_rows, replace = TRUE),
+  Weight = sample(weights, num_rows, replace = TRUE),  # Random chicken weights
+  Eggs_Laid = sample(150:300, num_rows, replace = TRUE)  # Number of eggs laid
+)
+
+#  egg size based on weight (heavier chickens lay larger eggs)
+chicken_data$Egg_Size <- ifelse(chicken_data$Weight >= 5, 
+                                sample(c("Large", "X-Large"), num_rows, replace = TRUE, prob = c(0.6, 0.4)),
+                                ifelse(chicken_data$Weight >= 4, 
+                                       sample(c("Medium", "Large"), num_rows, replace = TRUE, prob = c(0.7, 0.3)),
+                                       sample(c("Small", "Medium"), num_rows, replace = TRUE, prob = c(0.5, 0.5)))
+)
+
+# Display the first few rows of the data
+head(chicken_data)
+
+# Save the chicken data to a CSV file
+write.csv(chicken_data, "chicken_egg_weight_data.csv", row.names = FALSE)
+```  
+
+```{r, echo=FALSE, include=FALSE}
+# Load necessary libraries
+library(knitr)
+library(kableExtra)
+
+# Format the table with kable
+chicken_data %>%
+  kable("html", caption = "Chicken Data: Egg Size and Weight by Breed") %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed"),  # Optional bootstrap styling
+    font_size = 12,  # Change font size to match APA formatting
+    full_width = FALSE
+  ) %>%
+  column_spec(1, bold = TRUE)  # Bold the first column (Chicken_ID) for emphasis
+```  
+
+```{r, echo=FALSE, include=FALSE}
+
+# Example data
+chicken_data <- data.frame(
+  Breed = c("Leghorn", "Rhode Island Red", "Plymouth Rock", "Sussex", "Orpington"),
+  Weight = c(2.5, 3.2, 3.0, 3.6, 4.0),  # in kg
+  Egg_Size = c("Medium", "Large", "Large", "X-Large", "X-Large"),
+  Eggs_Laid = c(280, 250, 230, 220, 200)  # Number of eggs per year
+)
+
+# Format the table for PDF output using LaTeX
+chicken_data %>%
+  kable("latex", caption = "Chicken Data: Egg Size and Weight by Breed", booktabs = TRUE) %>%
+  kable_styling(latex_options = c("striped", "hold_position"),
+                font_size = 12, 
+                full_width = FALSE) %>%
+  column_spec(1, bold = TRUE)  # Bold the first column (Breed) for emphasis
+```  
+
+```{r, echo=FALSE}
+# Run the correlation between Weight and Eggs_Laid (Pearson correlation)
+correlation_result <- cor.test(chicken_data$Weight, chicken_data$Eggs_Laid)
+
+# Extract the relevant values from the correlation result
+rho <- correlation_result$estimate
+df <- correlation_result$parameter
+p_value <- correlation_result$p.value
+
+# Create a data frame for the APA-style table
+cor_table <- data.frame(
+  Variable1 = "Chicken Weight",
+  Variable2 = "Eggs Laid",
+  `Correlation Coefficient (r)` = round(rho, 2),
+  `df` = df,
+  `p-value` = ifelse(p_value < 0.001, "< .001", round(p_value, 3))
+)
+
+# Display the results in an APA-style table using knitr
+kable(cor_table, 
+      col.names = c("Variable 1", "Variable 2", "Correlation Coefficient (r)", "df", "p-value"), 
+      caption = "Correlation Between Chicken Weight and Eggs Laid", 
+      format = "pipe", 
+      digits = 2)
+```  
+
+```{r, echo=FALSE}
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+
+# Create a new column for average egg weight based on breed and egg size
+chicken_data$Egg_Weight <- round(runif(nrow(chicken_data), 50, 80), 2)  # Random egg weights between 50 and 80 grams
+
+# Calculate the average egg weight for each breed and egg size
+egg_summary <- chicken_data %>%
+  group_by(Breed, Egg_Size) %>%
+  summarize(Average_Egg_Weight = mean(Egg_Weight), .groups = "drop")
+
+# Create a bar plot with APA styling
+ggplot(egg_summary, aes(x = Breed, y = Average_Egg_Weight, fill = Egg_Size)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.7) +  # Adjust bar width for APA style
+  scale_fill_manual(values = c("Small" = "red", "Medium" = "yellow", "Large" = "green", "X-Large" = "blue")) +  # Custom colors
+  labs(title = "Average Egg Weight by Chicken Breed and Egg Size", 
+       x = "Chicken Breed", 
+       y = "Average Egg Weight (grams)", 
+       fill = "Egg Size") +
+  theme_minimal(base_size = 12) +  # Set base font size
+  theme(
+    axis.title = element_text(size = 12),  # Axis titles in font size 12
+    axis.text = element_text(size = 10),  # Axis text in font size 10
+    plot.title = element_text(size = 14, face = "bold", hjust = 0.5),  # Center and bold title
+    legend.title = element_text(size = 12),  # Legend title font size
+    legend.text = element_text(size = 10),  # Legend text font size
+    axis.text.x = element_text(angle = 45, hjust = 1),  # Rotate x-axis labels for readability
+    panel.grid.major = element_blank(),  # Remove major gridlines for cleaner look
+    panel.grid.minor = element_blank(),  # Remove minor gridlines
+    panel.border = element_rect(color = "black", fill = NA)  # Add border around the plot for neatness
+  )
+```
+
+```
+
+
+
 
 ## Owners: Qualitative Themes and Subthemes 
 Thematic Analysis of the transcribed interviews revealed five major themes: Economic Pragmatism, Self-Sufficiency and Food Security, Social and Community Dimensions, Practical Challenges and Adaptations, and Psychological and Emotional Benefits. 
