@@ -1,4 +1,5 @@
 ---
+output:pdf
 title: "That’s a Big-Ass Chicken: A Mixed Methods Examination of Urban Backyard Chicken Husbandry"
 shorttitle: "That's a Big-Ass Chicken"
 author:
