@@ -214,44 +214,6 @@ ggplot(chicken_weight, aes(x = Time, y = Weight, color = Diet, group = Diet)) +
 
 
 ## Eggs 
-```{r, echo=FALSE,include=FALSE}
-# Load necessary library
-set.seed(123)  # For reproducibility
-
-# Simulate chicken breeds
-breeds <- c("Leghorn", "Rhode Island Red", "Orpington", "Sussex", "Australorp")
-
-# Simulate egg sizes (larger eggs)
-egg_sizes <- c("Small", "Medium", "Large", "X-Large")
-
-# Simulate chicken weights (heavier chickens will lay larger eggs)
-weights <- seq(2.5, 6.5, by = 0.1)  # Chicken weights from 2.5 kg to 6.5 kg
-
-# Create fake data
-num_rows <- 100  # Number of data points
-chicken_data <- data.frame(
-  Chicken_ID = 1:num_rows,
-  Breed = sample(breeds, num_rows, replace = TRUE),
-  Weight = sample(weights, num_rows, replace = TRUE),  # Random chicken weights
-  Eggs_Laid = sample(150:300, num_rows, replace = TRUE)  # Number of eggs laid
-)
-
-# Simulate egg size based on weight (heavier chickens lay larger eggs)
-chicken_data$Egg_Size <- ifelse(chicken_data$Weight >= 5, 
-                                sample(c("Large", "X-Large"), num_rows, replace = TRUE, prob = c(0.6, 0.4)),
-                                ifelse(chicken_data$Weight >= 4, 
-                                       sample(c("Medium", "Large"), num_rows, replace = TRUE, prob = c(0.7, 0.3)),
-                                       sample(c("Small", "Medium"), num_rows, replace = TRUE, prob = c(0.5, 0.5)))
-)
-
-# Display the first few rows of the data
-head(chicken_data)
-
-# Save the chicken data to a CSV file
-write.csv(chicken_data, "chicken_egg_weight_data.csv", row.names = FALSE)
-
-```
-
 ```{r, echo=FALSE, include=FALSE}
 # Load necessary library
 set.seed(123)  # Created fake data because we want Kristen to get chickens 
