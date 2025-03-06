@@ -1,96 +1,71 @@
 ---
-title: "That’s a Big-Ass Chicken: A Mixed Methods Examination of Urban Backyard Chicken
-  Husbandry"
-author:
-- name: Karen Veronica Becerra
-  corresponding: true
-  orcid: "0009-0006-4967-0955"
-  email: kvbecerra@Uchicago.edu
-  affiliations:
-  - name: The University of Chicago
-    department: Department of Psychology
-    address: 5848 S. University Avenue
-    city: Chicago
-    region: IL
-    country: USA
-    postal-code: 60637
-    id: uchicago
-  role:
-  - conceptualization
-  - formal anlaysis
-  - methodology
-  - project administration
-  - software
-  - visualization
-  - editing
-- name: Kristen M. Johnson
-  orcid: "0009-0008-3757-5795"
-  email: kmjohnson25@uchicago.edu
-  affiliations:
-  - ref: uchicago
-  role:
-  - conceptualization
-  - data curation
-  - methodology
-  - project administration
-  - software
-  - writing
-  - editing
-- name: Michael Moroz
-  orcid: "0009-0000-9772-0001"
-  email: mrmoroz@uchicago.edu
-  affiliations:
-  - ref: uchicago
-  role:
-  - formal anlaysis
-  - software
-  - visualization
-  - editing
+title: "That’s a Big-Ass Chicken: A Mixed Methods Examination of Urban Backyard Chicken Husbandry"
 shorttitle: "That's a Big-Ass Chicken"
-output: pdf_document
-keywords:
-- chickens
-- backyard
-- eggs
-- pros and cons
-- bigger is better
+author:
+  - name: Karen Veronica Becerra
+    corresponding: true
+    orcid: 0009-0006-4967-0955
+    email: kvbecerra@Uchicago.edu 
+    affiliations:
+      - name: The University of Chicago 
+        department: Department of Psychology 
+        address: 5848 S. University Avenue
+        city: Chicago
+        region: IL
+        country: USA
+        postal-code: 60637
+        id: uchicago
+    role:
+      - conceptualization
+      - formal anlaysis
+      - methodology
+      - project administration
+      - software
+      - visualization
+      - editing 
+  - name: Kristen M. Johnson
+    orcid: 0009-0008-3757-5795
+    email: kmjohnson25@uchicago.edu 
+    affiliations:
+      - ref: uchicago
+    role:
+      - conceptualization
+      - data curation
+      - methodology
+      - project administration
+      - software
+      - writing
+      - editing
+  - name: Michael Moroz
+    orcid: 0009-0000-9772-0001
+    email: mrmoroz@uchicago.edu
+    affiliations:
+      - ref: uchicago
+    role:
+      - formal anlaysis
+      - software
+      - visualization
+      - editing
+abstract: "This study investigates the growing phenomenon of backyard chicken keeping in urban and suburban environments, a practice that has gained significant momentum amid rising commercial egg prices. Employing a mixed methods approach, we analyzed quantitative data from ______. Concurrently, we conducted thematic analysis of in-depth interviews with backyard chicken owners to explore perceived benefits and challenges. Our findings indicate that while initial setup costs average $487, households recover this investment within 14 months through egg production, with additional benefits including reduced food waste, improved garden soil quality, and reported increases in household well-being. Challenges identified include time commitment (averaging 28 minutes daily), navigating municipal regulations, and managing seasonal variations in productivity. Factor analysis revealed that success factors cluster around three dimensions: appropriate infrastructure, consistent maintenance routines, and community support networks. Ultimately, our results support the hypothesis that the benefits of backyard chicken keeping outweigh the challenges for most practitioners, though successful implementation depends on household-specific variables and community context. This research contributes to growing literature on urban agriculture while providing practical insights for potential chicken keepers, municipal policymakers, and sustainability advocates."
+keywords: [chickens, backyard, eggs, pros and cons, bigger is better]
 author-note:
   disclosures:
     conflict of interest: The authors have no conflicts of interest to declare.
-  financial-support: This study was supported by a grant from The International Society
-    for Fowl Language.
-  gratitude: The authors are grateful to Eddy the Chicken for her endless inspiration
-    and reluctant support.
-impact-statement: "This study illustrates not only how, but also why one should raise
-  big-ass backyard chickens. The results may be used by numerous individuals to convince
-  their domestic partners (such as the second author's husband) to build a backyard
-  coop and give in to the siren squawk of that sweet sweet chicken-raisin' lifestyle."
+  financial-support: "This study was supported by a grant from The International Society for Fowl Language."
+  gratitude: "The authors are grateful to Eddy the Chicken for her endless inspiration and reluctant support."
+impact-statement: "This study illustrates not only how, but also why one should raise big-ass backyard chickens. The results may be used by numerous individuals to convince their domestic partners (such as the second author's husband) to build a backyard coop and give in to the siren squawk of that sweet sweet chicken-raisin' lifestyle."
 bibliography: Chickens.bib
-format:
+format: 
+  #apaquarto-docx: default 
+  #apaquarto-html: default    # remember to reverse commenting out other formats when turning project in
   apaquarto-pdf: default
 floatsintext: true
 documentmode: man
 donotrepeattitle: true
-mainfont: Times New Roman
+mainfont: "Times New Roman"
 fontsize: 12pt
-abstract: "This study investigates the growing phenomenon of backyard chicken keeping
-  in urban and suburban environments, a practice that has gained significant momentum
-  amid rising commercial egg prices. Employing a mixed methods approach, we analyzed
-  quantitative data from ______. Concurrently, we conducted thematic analysis of in-depth
-  interviews with backyard chicken owners to explore perceived benefits and challenges.
-  Our findings indicate that while initial setup costs average $487, households recover
-  this investment within 14 months through egg production, with additional benefits
-  including reduced food waste, improved garden soil quality, and reported increases
-  in household well-being. Challenges identified include time commitment (averaging
-  28 minutes daily), navigating municipal regulations, and managing seasonal variations
-  in productivity. Factor analysis revealed that success factors cluster around three
-  support networks. Ultimately, our results support the hypothesis that the benefits
-  of backyard chicken keeping outweigh the challenges for most practitioners, though
-  successful implementation depends on household-specific variables and community
-  context. This research contributes to growing literature on urban agriculture while
-  providing practical insights for potential chicken keepers, municipal policymakers,
-  and sustainability advocates."
-  dimensions: appropriate infrastructure, consistent maintenance routines, and community
+
+---
 
 ```{r, echo=FALSE, include=FALSE}
 
@@ -239,6 +214,21 @@ ggplot(chicken_weight, aes(x = Time, y = Weight, color = Diet, group = Diet)) +
 
 
 ## Eggs 
+#| echo: FALSE
+#| label: regression-plot
+#| fig-cap: Regression of Weight on Time by Diet
+
+## Finally, plotting the regression.
+ggplot(chicken_weight, aes(x = Time, y = Weight, color = Diet, group = Diet)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  labs(x = "Time (days since birth)", y = "Weight (grams)", color = "Diet")
+
+```
+
+
+
+## Eggs 
 ```{r, echo=FALSE, include=FALSE}
 # Load necessary library
 set.seed(123)  # Created fake data because we want Kristen to get chickens 
@@ -278,6 +268,8 @@ head(chicken_data)
 # Save the chicken data to a CSV file
 write.csv(chicken_data, "chicken_egg_weight_data.csv", row.names = FALSE)
 ```  
+
+
 
 ```{r, echo=FALSE, include=FALSE}
 # Load necessary libraries
@@ -373,6 +365,8 @@ ggplot(egg_summary, aes(x = Breed, y = Average_Egg_Weight, fill = Egg_Size)) +
     panel.border = element_rect(color = "black", fill = NA)  # Add border
   )
 ```
+
+
 
 
 ## Owners: Qualitative Themes and Subthemes 
