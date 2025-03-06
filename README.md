@@ -1,5 +1,8 @@
 # That's a Big Ass Chicken
 Mini project chicken data analysis 
+#BAC_Manuscript_final_files folder
+Has all the document that were render when working on final BAC project 
+The qmd and rmarkdown for this project are in the main directory of this repo 
 # Assessment md folder
 This folder has all of the collaborators assessment md docs for this project 
 # To see pdf 
