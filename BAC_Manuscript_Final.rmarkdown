@@ -381,9 +381,9 @@ ggplot(egg_summary, aes(x = Breed, y = Average_Egg_Weight, fill = Egg_Size)) +
     legend.title = element_text(size = 12),  # Legend title font size
     legend.text = element_text(size = 10),  # Legend text font size
     axis.text.x = element_text(angle = 45, hjust = 1),  # Rotate x-axis labels for readability
-    panel.grid.major = element_blank(),  # Remove major gridlines for cleaner look
+    panel.grid.major = element_blank(),  # Remove major gridlines 
     panel.grid.minor = element_blank(),  # Remove minor gridlines
-    panel.border = element_rect(color = "black", fill = NA)  # Add border around the plot for neatness
+    panel.border = element_rect(color = "black", fill = NA)  # Add border
   )
 ```
 
