@@ -211,23 +211,6 @@ ggplot(chicken_weight, aes(x = Time, y = Weight, color = Diet, group = Diet)) +
 
 ```
 
-
-
-## Eggs 
-#| echo: FALSE
-#| label: regression-plot
-#| fig-cap: Regression of Weight on Time by Diet
-
-## Finally, plotting the regression.
-ggplot(chicken_weight, aes(x = Time, y = Weight, color = Diet, group = Diet)) + 
-  geom_point() + 
-  geom_smooth(method = "lm", se = FALSE) + 
-  labs(x = "Time (days since birth)", y = "Weight (grams)", color = "Diet")
-
-```
-
-
-
 ## Eggs 
 ```{r, echo=FALSE, include=FALSE}
 # Load necessary library

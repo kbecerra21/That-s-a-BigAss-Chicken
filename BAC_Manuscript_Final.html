@@ -763,19 +763,6 @@ Regression of Weight on Time by Diet
 </div>
 <div id="eggs" class="section level2">
 <h2>Eggs</h2>
-<p>#| echo: FALSE #| label: regression-plot #| fig-cap: Regression of
-Weight on Time by Diet</p>
-</div>
-<div id="finally-plotting-the-regression." class="section level2">
-<h2>Finally, plotting the regression.</h2>
-<p>ggplot(chicken_weight, aes(x = Time, y = Weight, color = Diet, group
-= Diet)) + geom_point() + geom_smooth(method = “lm”, se = FALSE) +
-labs(x = “Time (days since birth)”, y = “Weight (grams)”, color =
-“Diet”)</p>
-<p>```</p>
-</div>
-<div id="eggs-1" class="section level2">
-<h2>Eggs</h2>
 <table style="width:100%;">
 <caption>Correlation Between Chicken Weight and Eggs Laid</caption>
 <colgroup>
