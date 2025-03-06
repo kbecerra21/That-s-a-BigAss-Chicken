@@ -14,3 +14,5 @@ The qualitative data for this paper can be found in the folder Qualitativedata_B
 
 ## Images 
 The images used for this paper can be found in the folder Images_BigAssChicken.
+# Manuscript_Not official_drafting_file
+This folder contains the draft of manuscript but not the one used for the final. The final manuscripts files are labeled with the BAC prefix.
