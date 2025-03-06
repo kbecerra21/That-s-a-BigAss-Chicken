@@ -64,7 +64,6 @@ documentmode: man
 donotrepeattitle: true
 mainfont: "Times New Roman"
 fontsize: 12pt
-
 ---
 
 
@@ -480,4 +479,3 @@ This  study supports the hypothesis that the benefits of backyard chicken keepin
 Future research should further explore the long-term impacts of backyard chicken keeping on food security, community engagement, and mental health. Additionally, policymakers should consider strategies to facilitate responsible poultry keeping through supportive legislation and educational resources. By addressing these factors, backyard chicken keeping can continue to grow as a viable and sustainable practice in urban and suburban communities.
 
 # References
-
