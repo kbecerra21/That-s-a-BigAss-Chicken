@@ -21,15 +21,20 @@ Mini-project title:Group-Repo-Collaborate
 
 Submission date:
 
-Project GitHub subdirectory URL:
+Project GitHub subdirectory URL: https://github.com/kbecerra21/That-s-a-BigAss-Chicken
 URL or instructions to access additional materials, if needed:Unique project Repo URL: 
 access to repo has also been requested via sending collaborator request to the instructor's github account.
+All details of repo are in README and acess was sent to TA and Dr.Dowling 
 
 
 ## Additional information
 
 1. Did you complete the project with direct collaborators or general support? If so, who did you collaborate with and what was/were their contribution(s)?
-    1. Direct collaborators (students who will be turning in a version of the same project) and their contributions:Kristen Johnson, Micheal Moroz  
+    1. Direct collaborators (students who will be turning in a version of the same project) and their contributions:Kristen Johnson, Micheal Moroz  and I worked on this project together our contributions are listed below. 
+    Micheal 
+    Karen
+    Kristen 
+    
     2. General support (students who helped you with debugging, conceptual understanding, or the like) and their contributions:
 2. Did you use LLMs or other AI models to generate text or code for this project? If so, which tools did you use and how did you use them? Remember in this class you *are* allowed (even encouraged) to use these tools for help with coding, but not for writing text. This can be very brief, just one or two sentences is fine unless you have more you'd like to add.
 3. For off-the-menu projects only, did you complete the project as proposed? If not, what changed?
@@ -179,7 +184,7 @@ Below each learning objective is a list of general expectations for meeting that
     1. Creates at least 2 figures with different `geom_*` layers (e.g., a scatter plot and a bar plot)
     2. At least one plot is multi-variable
 
-        -   [ ] Objective attempt
+        -   [x ] Objective attempt
         -   [ ] Unique objective attempt
         -   [ ] Objective met
         -   Grader comments:
@@ -188,7 +193,7 @@ Below each learning objective is a list of general expectations for meeting that
 
     1. Uses at least 2 unique data-mapped `aes()` arguments (e.g., color, shape, size) to group data in a plot in one or multiple plots
 
-        -   [ ] Objective attempt
+        -   [x ] Objective attempt
         -   [ ] Unique objective attempt
         -   [ ] Objective met
         -   Grader comments:
@@ -210,7 +215,7 @@ Below each learning objective is a list of general expectations for meeting that
     3. Variables display in plain English (e.g., "Age (years)" not "child_age_yrs"
     4. Uses at least 1 static aesthetic (e.g., color, shape, size) that improves visual clarity without mapping to data
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Unique objective attempt
         -   [ ] Objective met
         -   Grader comments:
@@ -223,7 +228,7 @@ Below each learning objective is a list of general expectations for meeting that
     2. Calculates summary/descriptive statistics for at least 1 non-numeric variable (e.g., frequencies, proportions)
     3. Presents results in narrative text, table, or plot
 
-        -   [ ] Objective attempt
+        -   [x ] Objective attempt
         -   [ ] Unique objective attempt
         -   [ ] Objective met
         -   Grader comments:
@@ -247,7 +252,7 @@ Below each learning objective is a list of general expectations for meeting that
     4. Uses dynamic inline R code to render data-dependent text
 
         -   [ ] Objective attempt
-        -   [ ] Unique objective attempt
+        -   [x ] Unique objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -260,7 +265,7 @@ Below each learning objective is a list of general expectations for meeting that
     3. May use `cite_r()` to cite R and R packages
 
         -   [ ] Objective attempt
-        -   [ ] Unique objective attempt
+        -   [x ] Unique objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -287,7 +292,7 @@ Below each learning objective is a list of general expectations for meeting that
     4.  Chunks are distributed throughout the manuscript, sensibly placed near the text they support
 
         -   [ ] Objective attempt
-        -   [ ] Unique objective attempt
+        -   [ x] Unique objective attempt
         -   [ ] Objective met
         -   Grader comments: 
         
@@ -299,7 +304,7 @@ Below each learning objective is a list of general expectations for meeting that
     4. Organizes setup chunks sensibly
 
         -   [ ] Objective attempt
-        -   [ ] Unique objective attempt
+        -   [ x] Unique objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -312,7 +317,7 @@ Below each learning objective is a list of general expectations for meeting that
     5. References render without error and link to the correct table/figure in pdf/html output
 
         -   [ ] Objective attempt
-        -   [ ] Unique objective attempt
+        -   [ x] Unique objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
