@@ -463,6 +463,37 @@ thematic analysis
 
 \subsection{Eggs}\label{eggs}
 
+\begin{verbatim}
+#| label: data_analysis_2
+Egg_Size <- read.csv("Data_BigAssChicken/GallusGallusDomesticus.csv")
+head(Egg_Size)
+\end{verbatim}
+
+\begin{verbatim}
+# Step 1: Install and load the dplyr package (if not installed)
+# install.packages("dplyr") # this if you haven't installed dplyr
+library(dplyr)
+
+# Step 2: Load the data
+Egg_Size <- read.csv("Data_BigAssChicken/GallusGallusDomesticus.csv")
+
+# Step 3: Select relevant columns
+Egg_Size <- Egg_Size[, c("GallusBreed", "GallusEggWeight", "GallusWeight")]
+
+# Step 4: Remove rows with missing values
+Egg_Size <- na.omit(Egg_Size)
+
+# Step 5: Arrange the data by EggWeight in ascending order
+Egg_Size <- Egg_Size %>%
+  arrange(GallusEggWeight)
+
+# Step 6: Save the cleaned and sorted data to a new CSV file
+write.csv(Egg_Size, "Egg_Size_Data.csv", row.names = FALSE)
+
+# Step 7: View the cleaned and sorted data
+head(Egg_Size)
+\end{verbatim}
+
 \subsection{Owners: Qualitative Themes and
 Subthemes}\label{owners-qualitative-themes-and-subthemes}
 

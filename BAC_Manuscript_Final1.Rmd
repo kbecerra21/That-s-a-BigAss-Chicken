@@ -67,7 +67,6 @@ fontsize: 12pt
 
 ---
 
-
 ```{r, echo=FALSE, include=FALSE}
 
 # Load necessary libraries
@@ -78,6 +77,8 @@ library(tidyverse)
 library(flextable)
 
 ```
+
+
 
 > *If you've ever seen a picture of Pechugas the Rooster (Fig. 1), your first words would invariably be "That's a Big-Ass Chicken!" And you would be correct.*
 
@@ -130,6 +131,8 @@ thematic analysis
 
 # Results
 ## Chickens  
+
+
 ```{r, echo=FALSE, include=FALSE}
 
 #| label: data-analysis
@@ -208,20 +211,9 @@ ggplot(chicken_weight, aes(x = Time, y = Weight, color = Diet, group = Diet)) +
 
 ```
 
+
+
 ## Eggs 
-```{recho=FALSE, include=FALSE}
-#| label: data_analysis_2
-Egg_Size <- read.csv("Data_BigAssChicken/GallusGallusDomesticus.csv")
-head(Egg_Size)
-```
-
-```{recho=FALSE, include=FALSE}
-
-```
-
-
-
-
 
 ## Owners: Qualitative Themes and Subthemes 
 Thematic Analysis of the transcribed interviews revealed five major themes: Economic Pragmatism, Self-Sufficiency and Food Security, Social and Community Dimensions, Practical Challenges and Adaptations, and Psychological and Emotional Benefits. 
