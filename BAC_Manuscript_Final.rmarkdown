@@ -266,7 +266,7 @@ breeds <- c("Leghorn", "Rhode Island Red", "Orpington", "Sussex", "Australorp") 
 egg_sizes <- c("Small", "Medium", "Large", "X-Large")
 
 # Simulate chicken weights (heavier chickens will lay larger eggs)
-weights <- seq(2.5, 6.5, by = 0.1)  # Chicken weights from 2.5 kg to 6.5 kg
+weights <- seq(2.5, 6.5, by = 0.1)  # Chicken weights from 2.5 kg to 6.5 kg - the 6.5 kg is what my chickens weight so that waht wen with 
 
 # Create fake data
 num_rows <- 100  # Number of data points
@@ -301,7 +301,6 @@ library(kableExtra)
 chicken_data %>%
   kable("html", caption = "Chicken Data: Egg Size and Weight by Breed") %>%
   kable_styling(
-    bootstrap_options = c("striped", "hover", "condensed"),  # Optional bootstrap styling
     font_size = 12,  # Change font size to match APA formatting
     full_width = FALSE
   ) %>%
@@ -318,7 +317,7 @@ chicken_data <- data.frame(
   Eggs_Laid = c(280, 250, 230, 220, 200)  # Number of eggs per year
 )
 
-# Format the table for PDF output using LaTeX
+# Format the table for PDF output using LaTeX - wanted to ry out something that was mentioned in class but that we didnt really cover 
 chicken_data %>%
   kable("latex", caption = "Chicken Data: Egg Size and Weight by Breed", booktabs = TRUE) %>%
   kable_styling(latex_options = c("striped", "hold_position"),
@@ -331,7 +330,7 @@ chicken_data %>%
 # Run the correlation between Weight and Eggs_Laid (Pearson correlation)
 correlation_result <- cor.test(chicken_data$Weight, chicken_data$Eggs_Laid)
 
-# Extract the relevant values from the correlation result
+# relevant values from the correlation result
 rho <- correlation_result$estimate
 df <- correlation_result$parameter
 p_value <- correlation_result$p.value
@@ -387,10 +386,6 @@ ggplot(egg_summary, aes(x = Breed, y = Average_Egg_Weight, fill = Egg_Size)) +
     panel.border = element_rect(color = "black", fill = NA)  # Add border around the plot for neatness
   )
 ```
-
-```
-
-
 
 
 ## Owners: Qualitative Themes and Subthemes 
