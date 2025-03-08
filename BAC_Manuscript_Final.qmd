@@ -52,8 +52,8 @@ keywords: [chickens, backyard, eggs, pros and cons, bigger is better]
 author-note:
   disclosures:
     conflict of interest: The authors have no conflicts of interest to declare.
-  financial-support: "This study was supported by a grant from The International Society for Fowl Language."
-  gratitude: "The authors are grateful to Eddy the Chicken for her endless inspiration and reluctant support."
+    financial-support: "This study was supported by a grant from The International Society for Fowl Language."
+    gratitude: "The authors are grateful to Edgar the Chicken for her endless inspiration and reluctant support."
 impact-statement: "This study illustrates not only how, but also why one should raise big-ass backyard chickens. The results may be used by numerous individuals to convince their domestic partners (such as the second author's husband) to build a backyard coop and give in to the siren squawk of that sweet sweet chicken-raisin' lifestyle."
 bibliography: Chickens.bib
 format: 
@@ -67,7 +67,6 @@ mainfont: "Times New Roman"
 fontsize: 12pt
 
 ---
-
 
 ```{r}
 #| label: Setup
@@ -84,7 +83,6 @@ library(knitr)
 library(kableExtra)
 library(dplyr)
 ```
-
 > *If you've ever seen a picture of Pechugas the Rooster (Fig. 1), your first words would invariably be "That's a Big-Ass Chicken!" And you would be correct.*
 
 ![Pechugas the Rooster](Images_BigAssChicken/orpignton rooster.jpg){
@@ -93,12 +91,12 @@ library(dplyr)
   fig-alt="A picture of Pechugas the Rooster being a Big-Ass Chicken." 
   apa-note="This is a Big-Ass Chicken."
   }
-
+  
 In recent decades, the practice of maintaining domestic poultry within urban and suburban residential settings has experienced a notable resurgence [@maceBackyardOurBeds2024]. This phenomenon, colloquially referred to as "backyard chicken keeping," represents a fascinating intersection of agricultural tradition and contemporary sustainability movements. The economic landscape has further accelerated this trend, as inflated egg prices have prompted an increasing number of households to consider domestic poultry as a pragmatic response to marketplace volatility [@italieSoaringEggPrices2025]. Indeed, consumer data suggests that the correlation between rising commercial egg costs and the purchase of chicken coops is remarkably robust[@kagayaPriceAttentionAnalysis2025].
 
 [paragraph about why bigger is better, with regards to egg production and everything else^[This paragraph did not end up getting written because really what more do we need to say.]]
 
-Previous studies have largely focused either on large-scale commercial poultry operations or on historical agricultural practices [@bistSustainablePoultryFarming2024; @grzinicIntensivePoultryFarming2023; @jeniOverviewHealthChallenges2021].  While proponents extol the virtues of fresh eggs and animated garden assistants, detractors cite concerns ranging from zoonotic disease transmission to neighborhood noise pollution---a concern that anyone who has experienced a rooster's enthusiasm for announcing dawn can readily appreciate. Surprisingly, of those studies that do consider the costs and benefits of backyard chicken keeping, none that to the authors knowledge look into the phenomenon of the **Big-Ass Chicken** (BAC)[@ayalaReviewPathogenTransmission2020; @fischerDefenceBackyardChickens2019; @schindlerBackyardChickensFrontYard; @singhBackyardPoultryFarming2022]. This study aims to fill that obvious (and sizeable) gap.
+Previous studies have largely focused either on large-scale commercial poultry operations or on historical agricultural practices [@bistSustainablePoultryFarming2024; @grzinicIntensivePoultryFarming2023; @jeniOverviewHealthChallenges2021].  While proponents extol the virtues of fresh eggs and animated garden assistants, detractors cite concerns ranging from zoonotic disease transmission to neighborhood noise pollution---a concern that anyone who has experienced a rooster's enthusiasm for announcing dawn can readily appreciate. Surprisingly, of those studies that do consider the costs and benefits of backyard chicken keeping, none that to the authors knowledge look into the phenomenon of the **Big-Ass Chicken (BAC)** [@ayalaReviewPathogenTransmission2020; @fischerDefenceBackyardChickens2019; @schindlerBackyardChickensFrontYard; @singhBackyardPoultryFarming2022]. This study aims to fill that obvious (and sizeable) gap.
 
 # Current Study
 Our research design employs a mixed methods approach to develop a nuanced understanding of this increasingly common practice. The methodology combines quantitative data analysis examining multiple factors related to Big-Ass backyard chicken husbandry---including analysis of factors related to chicken size and egg production---with qualitative thematic analysis of in-depth interviews conducted with chicken owners of BAC's. By triangulating these methodological approaches, we aspire to move beyond anecdotal evidence and develop an empirically robust understanding of what might be termed the "net hennefit" of backyard chicken husbandry in contemporary urban contexts. The present study thus investigates two hypotheses: 
@@ -115,123 +113,18 @@ Our research design employs a mixed methods approach to develop a nuanced unders
 # Method
 ## Participants
 ### Chickens
-We looked at 50 Gallus gallus domesticus chicks, starting from hatching. 
-
-### Humans
-Semi-structured interviews were conducted with 50 urban backyard chicken keepers (32 female, 17 male, 1 non-binary) across three metropolitan areas (Eastern Seaboard, n=20; Midwest, n=15; Pacific Northwest, n=15). Participants had maintained backyard chickens for periods ranging from 6 months to 12 years (mean = 3.7 years). Flock sizes ranged from 2-15 birds (median = 4). 
-
-## Procedure
-### Quantitative
-We measured the body weights of the chickensat birth and every second day thereafter until day 20. They were also measured on day 21. There were four groups of chicks on different protein diets to test the effect of protein in 4 types of feed on early development of chicks. The 4 feeds are a control (normal diet) and 3 test feeds (10%, 20%, and 40% protein replacement). 
-
-### Qualitative
-Semi-structured interviews lasting 45-90 minutes were audio-recorded, transcribed verbatim, and analyzed using Braun and Clarke's (2006) six-phase approach to thematic analysis. Initial coding was conducted independently by two researchers, followed by collaborative theme development. Member-checking was employed with a subset of 12 participants to verify thematic authenticity.
-
-## Measures
-### Quantitative
-
-### Qualitative
-thematic analysis 
-
-# Results
-## Chickens  
 ```{r}
-#| label: data-analysis_setup_chicken-weight
+#| label: read_Gallus-Gallus_df
 #| echo: FALSE 
 #| include: FALSE
 
 ## Reading the data 
-chicken_weight = read.csv("Data_BigAssChicken/ChickWeight.csv")
-
-# head(chicken_data)
-## Removing the 'X' column (it's extra and doesn't need to be in the data frame)
-chicken_weight = as_tibble(chicken_weight)
-
-chicken_weight = chicken_weight %>%
-  select((-c(X)))
-
-head(chicken_weight)
-
-## Changing the 'weight' column name to 'Weight' so everything remains consistent in terms of capitalization
-chicken_weight = chicken_weight %>%
-  rename(Weight = weight)
-```
-
-```{r}
-#| label: chicken_weight_growth_plot
-#| echo: FALSE 
-#| include: FALSE
-
-## Making the first plot (weight on the y-axis, time on the x-axis, line plots grouped by chicken ID (meaning each chicken will have its own colour on the line plot))
-
-ggplot(chicken_weight, aes(x = Time, y = Weight, colour = Chick, group = Chick)) + geom_line() + labs(x = "Time (days since birth)", y = "Weight (grams)", title = "Figure 1: Plot of Chicken Growth") + theme_minimal()
+Gallus_Gallus = read.csv("Data_BigAssChicken/GallusGallusDomesticus.csv")
 
 ```
+We looked at a total of **`r n_distinct(Gallus_Gallus$GallusID)`** Gallus gallus domesticus chicks, starting from hatching.
 
-```{r}
-#| label: chicken_weight_growth-rate
-#| echo: FALSE 
-#| include: FALSE
-
-## Ok now we have visualized the different growth trends of the various chickens. Now we probably want to look at how diet might factor into this trend. First let's calculate the mean growth rates of all the various chickens according to diet (rated 1 to 4)
-
-## Basic mathematical premise: end - start / start gives us the growth rate for a single period. Then we just add all the individual growth rates and divide by the number of periods
-
-chicken_weight = chicken_weight %>%
-  arrange(Chick, Time) %>%
-  group_by(Chick) %>%
-  mutate(GrowRate = (Weight - first(Weight)) / (Time - first(Time))) %>%
-  ungroup()
-
-## Now analyzing with diets
-
-dGrowRate = chicken_weight %>%
-  group_by(Diet) %>%
-  summarise(meanGrowRate = mean(GrowRate, na.rm = TRUE))
-
-print(dGrowRate)
-```
-
-```{r}
-#| label: chicken_weight_growth-rate_plot
-#| echo: FALSE 
-#| include: FALSE
-
-## Ok so now we see that diet 3 has chickens with the highest mean growth rates (per day). Diet 4 comes in second, then diet 2, then diet 1. Let's visualize everything in a ggplot.
-
-ggplot(dGrowRate, aes(x = Diet, y = meanGrowRate, fill = Diet)) + geom_bar(stat = "identity") + labs(x = "Diet", y = "Mean Growth Rate", title = "Figure 2: Mean Growth Rate Bar Plot (rate per day)") + theme_minimal()
-
-```
-
-```{r}
-#| label: chicken_weight_regression
-#| echo: FALSE 
-#| include: FALSE
-
-## So if we are to infer that diet is a good predictor of growth rates (obviously in addition to time), we should see diet as a significant predictor of weight in a linear regression. Let's try that now. 
-
-lmWeight = lm(Weight ~ Time + Diet, data = chicken_weight)
-summary(lmWeight)
-
-## So we see that both time and diet are significant predictors of weight. Meaning a one unit increase in time (which actually means going from 0 to 2, or 2 to 4, etc) corresponds with an 8.77 gram increase in weight. In addition, a one unit increase in diet (meaning going from diet 1 to 2, 2 to 3, or 3 to 4) corresponds with an 11.78 gram increase in weight. So the interpretation is that if using diet 4 as opposed to diet 1, you would see on average approximately a 33 gram weight increase. 
-
-```
-
-```{r}
-#| label: chicken_weight_regression-plot
-#| echo: FALSE
-#| fig-cap: Regression of Weight on Time by Diet
-
-## Finally, plotting the regression.
-ggplot(chicken_weight, aes(x = Time, y = Weight, color = Diet, group = Diet)) + 
-  geom_point() + 
-  geom_smooth(method = "lm", se = FALSE) + 
-  labs(x = "Time (days since birth)", y = "Weight (grams)", color = "Diet")
-
-```
-
-
-## Eggs 
+### Eggs
 ```{r}
 #| label: chicken_egg_data
 #| echo: FALSE 
@@ -272,11 +165,162 @@ head(chicken_data)
 # Save the chicken data to a CSV file
 write.csv(chicken_data, "chicken_egg_weight_data.csv", row.names = FALSE)
 ```  
+We looked at a total of **`r n_distinct(chicken_data$Eggs_Laid)`** eggs laid from **`r n_distinct(chicken_data$Chicken_ID)`** chickens.
 
+### Humans
+```{r}
+#| label: urban-chicken-keepers_df
+#| echo: FALSE 
+#| include: FALSE
+# Creating human data frame:
+# Set seed for reproducibility
+set.seed(123)
+
+# Define the sample size
+n <- 50
+
+# Generate gender data (32 female, 17 male, 1 non-binary)
+gender <- c(rep("Female", 32), rep("Male", 17), rep("Non-binary", 1))
+
+# Generate location data (20 Eastern Seaboard, 15 Midwest, 15 Pacific Northwest)
+location <- c(rep("Eastern Seaboard", 20), rep("Midwest", 15), rep("Pacific Northwest", 15))
+
+# Generate experience data (randomly between 0.5 and 12 years)
+experience <- round(runif(n, 0.5, 12), 1)
+
+# Generate flock size data (randomly between 2 and 15 chickens)
+flock_size <- sample(2:15, n, replace = TRUE)
+
+# Create the data frame
+urban_chicken_keepers <- data.frame(
+  ID = 1:n,
+  Gender = gender,
+  Location = location,
+  Experience = experience,
+  Flock_Size = flock_size
+)
+
+# View the first few rows of the data frame
+head(urban_chicken_keepers)
+```
+Semi-structured interviews were conducted with **`r n_distinct(urban_chicken_keepers$ID)`** urban backyard chicken keepers (`r sum(urban_chicken_keepers$Gender == "Female")` female, `r sum(urban_chicken_keepers$Gender == "Male")` male,  `r sum(urban_chicken_keepers$Gender == "Non-binary")` non-binary) across three metropolitan areas (Eastern Seaboard, n=`r sum(urban_chicken_keepers$Location == "Eastern Seaboard")`; Midwest, n=`r sum(urban_chicken_keepers$Location == "Midwest")`; Pacific Northwest, n=`r sum(urban_chicken_keepers$Location == "Pacific Northwest")`). Participants had maintained backyard chickens for periods ranging from 6 months to 12 years (mean = `r; Pacific Northwest, n=15). Participants had maintained backyard chickens for periods ranging from 6 months to 12 years (mean = `r mean(urban_chicken_keepers$Experience)`). Flock sizes ranged from 2-15 birds (median = `r median(urban_chicken_keepers$Flock_Size)`). 
+
+## Procedure
+### Quantitative
+We measured the body weights of the chickensat birth and every second day thereafter until day 20. They were also measured on day 21. There were four groups of chicks on different protein diets to test the effect of protein in 4 types of feed on early development of chicks. The 4 feeds are a control (average diet of <10% protein replacement is Diet 1) and 3 test feeds (10% is Diet 2, 20% is Diet 3, and 40% protein replacement is Diet 4). 
+
+### Qualitative
+Semi-structured interviews lasting 45-90 minutes were audio-recorded, transcribed verbatim, and analyzed using Braun and Clarke's (2006) six-phase approach to thematic analysis. Initial coding was conducted independently by two researchers, followed by collaborative theme development. Member-checking was employed with a subset of 12 participants to verify thematic authenticity.
+
+## Measures
+### Quantitative
+We collected weight measurements using scales that are tiny and adorable for baby chickens/eggs and then also some considerably bigger scales for the BAC's.
+
+### Qualitative
+We applied thematic analysis to find relevant themes and then came to consensus on the affect valence of each response through the IOD (It's Obvious, Dummy) scale.
+
+# Results
+## Chickens  
+```{r}
+#| label: data-analysis_setup_chicken-weight
+#| echo: FALSE 
+#| include: FALSE
+
+## Reading the data 
+chicken_weight = read.csv("Data_BigAssChicken/ChickWeight.csv")
+
+# head(chicken_data)
+## Removing the 'X' column (it's extra and doesn't need to be in the data frame)
+chicken_weight = as_tibble(chicken_weight)
+
+chicken_weight = chicken_weight %>%
+  select((-c(X)))
+
+head(chicken_weight)
+
+## Changing the 'weight' column name to 'Weight' so everything remains consistent in terms of capitalization
+chicken_weight = chicken_weight %>%
+  rename(Weight = weight)
+```
+
+```{r}
+#| label: chicken_weight_growth_plot
+#| echo: FALSE 
+
+
+## Making the first plot (weight on the y-axis, time on the x-axis, line plots grouped by chicken ID (meaning each chicken will have its own colour on the line plot))
+
+ggplot(chicken_weight, aes(x = Time, y = Weight, colour = Chick, group = Chick)) + geom_line() + labs(x = "Time (days since birth)", y = "Weight (grams)", title = "Figure 1: Plot of Chicken Growth") + theme_minimal()
+
+```
+Figure 1 shows the different growth trends of the various chickens.
+```{r}
+#| label: chicken_weight_growth-rate
+#| echo: FALSE 
+#| include: false
+## Ok now we have visualized the different growth trends of the various chickens. Now we probably want to look at how diet might factor into this trend. First let's calculate the mean growth rates of all the various chickens according to diet (rated 1 to 4)
+
+## Basic mathematical premise: end - start / start gives us the growth rate for a single period. Then we just add all the individual growth rates and divide by the number of periods
+
+chicken_weight = chicken_weight %>%
+  arrange(Chick, Time) %>%
+  group_by(Chick) %>%
+  mutate(GrowRate = (Weight - first(Weight)) / (Time - first(Time))) %>%
+  ungroup()
+
+## Now analyzing with diets
+
+dGrowRate = chicken_weight %>%
+  group_by(Diet) %>%
+  summarise(meanGrowRate = mean(GrowRate, na.rm = TRUE))
+
+print(dGrowRate)
+```
+Looking at diet's effect on growth rates, we found that protein content of 20% had the most positive effect on chicken growth.
+```{r}
+#| label: chicken_weight_growth-rate_plot
+#| echo: FALSE 
+
+## Ok so now we see that diet 3 has chickens with the highest mean growth rates (per day). Diet 4 comes in second, then diet 2, then diet 1. Let's visualize everything in a ggplot.
+
+ggplot(dGrowRate, aes(x = Diet, y = meanGrowRate, fill = Diet)) + geom_bar(stat = "identity") + labs(x = "Diet", y = "Mean Growth Rate", title = "Figure 2: Mean Growth Rate Bar Plot (rate per day)") + theme_minimal()
+
+```
+As shown in Figure 2 we see that diet 3 has chickens with the highest mean growth rates (per day). Diet 4 comes in second, then diet 2, then diet 1.
+```{r}
+#| label: chicken_weight_regression
+#| echo: FALSE 
+#| include: false
+
+## So if we are to infer that diet is a good predictor of growth rates (obviously in addition to time), we should see diet as a significant predictor of weight in a linear regression. Let's try that now. 
+
+lmWeight = lm(Weight ~ Time + Diet, data = chicken_weight)
+summary(lmWeight)
+
+## So we see that both time and diet are significant predictors of weight. Meaning a one unit increase in time (which actually means going from 0 to 2, or 2 to 4, etc) corresponds with an 8.77 gram increase in weight. In addition, a one unit increase in diet (meaning going from diet 1 to 2, 2 to 3, or 3 to 4) corresponds with an 11.78 gram increase in weight. So the interpretation is that if using diet 4 as opposed to diet 1, you would see on average approximately a 33 gram weight increase. 
+
+```
+
+```{r}
+#| label: chicken_weight_regression-plot
+#| echo: FALSE
+#| fig-cap: Regression of Weight on Time by Diet
+
+## Finally, plotting the regression.
+ggplot(chicken_weight, aes(x = Time, y = Weight, color = Diet, group = Diet)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  labs(x = "Time (days since birth)", y = "Weight (grams)", color = "Diet")
+
+```
+We found that both time and diet are significant predictors of weight. Meaning a one unit increase in time (which actually means going from 0 to 2, or 2 to 4, etc) corresponds with an 8.77 gram increase in weight. In addition, a one unit increase in diet (meaning going from diet 1 to 2, 2 to 3, or 3 to 4) corresponds with an 11.78 gram increase in weight. So the interpretation is that if using diet 4 as opposed to diet 1, you would see on average approximately a 33 gram weight increase. 
+
+## Eggs 
+As shown in Table 1, we found that a component of our hypothesis was true: Big-Ass Chickens lay a Big-Ass-load of eggs.
 ```{r}
 #| label: chicken_egg_size_weight
 #| echo: FALSE 
-#| include: FALSE
+#| include: false
 
 # Format the table with kable
 chicken_data %>%
@@ -291,7 +335,6 @@ chicken_data %>%
 ```{r}
 #| label: chicken-egg_summary_stats
 #| echo: FALSE
-#| include: FALSE
 
 # Example data
 chicken_data <- data.frame(
@@ -310,10 +353,10 @@ chicken_data %>%
   column_spec(1, bold = TRUE)  # Bold the first column (Breed) for emphasis
 ```  
 
+As shown in Table 2 and contrary to our hypothesis, however, there is a negative correlation between chicken weight and egg production within the Big-Ass Chicken demographic. A Pearson correlation was conducted to examine the relationship between chicken weight and eggs laid. The results indicated a strong, negative correlation between the two variables, r(30) = -0.93, p = .02. This suggests that as chicken weight increases, the number of eggs laid tends to decrease.
 ```{r}
 #| label: chicken-egg_correlation
 #| echo: FALSE
-#| include: FALSE
 
 # Run the correlation between Weight and Eggs_Laid (Pearson correlation)
 correlation_result <- cor.test(chicken_data$Weight, chicken_data$Eggs_Laid)
@@ -340,10 +383,11 @@ kable(cor_table,
       digits = 2)
 ```  
 
+However, as you can see in Figure 4, larger BAC's produced larger eggs, so really our main hypothesis of more chicken = more egg is like actually totally right when you think about it. It's not just about the number of eggs, but also the quantity of goo within each egg. Put another way, it's not just the size that matters, but how you use it.... it being the egg goo.
 ```{r}
 #| label: chicken-egg_correlation_plot
 #| echo: FALSE
-
+#| fig-cap: Average Egg Weight by Chicken Breed and Egg Size
 # Create a new column for average egg weight based on breed and egg size
 chicken_data$Egg_Weight <- round(runif(nrow(chicken_data), 50, 80), 2)  # Random egg weights between 50 and 80 grams
 
@@ -356,8 +400,7 @@ egg_summary <- chicken_data %>%
 ggplot(egg_summary, aes(x = Breed, y = Average_Egg_Weight, fill = Egg_Size)) +
   geom_bar(stat = "identity", position = "dodge", width = 0.7) +  # Adjust bar width for APA style
   scale_fill_manual(values = c("Small" = "red", "Medium" = "yellow", "Large" = "green", "X-Large" = "blue")) +  # Custom colors
-  labs(title = "Average Egg Weight by Chicken Breed and Egg Size", 
-       x = "Chicken Breed", 
+  labs(x = "Chicken Breed", 
        y = "Average Egg Weight (grams)", 
        fill = "Egg Size") +
   theme_minimal(base_size = 12) +  # Set base font size
@@ -398,7 +441,6 @@ Many participants (n=29, 58%) reported unanticipated economic advantages, includ
 > "They eat all our kitchen scraps, turn them into eggs and fantastic compost. My garden has never been more productive, which means even more grocery savings." (Participant 42, Pacific Northwest)
 
 ### 2. Self-Sufficiency and Food Security
-
 #### 2.1 Control Over Food Supply
 A dominant theme emerged around increased feelings of food security and self-reliance:
 
@@ -417,7 +459,6 @@ Many participants (n=31, 62%) described chicken keeping as part of a broader tra
 > "The chickens were our gateway. Now we've got vegetable beds, rainwater collection, and we're thinking about beekeeping next year." (Participant 28, Midwest)
 
 ### 3. Social and Community Dimensions
-
 #### 3.1 Neighborhood Connections
 Unexpectedly, chicken keeping frequently facilitated community building:
 
@@ -436,7 +477,6 @@ Navigating municipal regulations and neighbor relationships emerged as significa
 > "Getting the permit was straightforward, but keeping peace with one particular neighbor has been ongoing diplomacy. Giving them free eggs helps." (Participant 19, Midwest)
 
 ### 4. Practical Challenges and Adaptations
-
 #### 4.1 Time Commitment Reality
 Time requirements emerged as the most frequently cited challenge (n=41, 82%):
 
@@ -455,7 +495,6 @@ Most participants (n=43, 86%) described a significant learning curve, mitigated 
 > "YouTube and Facebook groups were lifesavers. There's always someone online who's dealt with whatever weird chicken situation you're facing at 11 PM." (Participant 14, Midwest)
 
 ### 5. Psychological and Emotional Benefits
-
 #### 5.1 Stress Reduction
 An unexpected theme emerged around the stress-reducing properties of chicken keeping:
 
@@ -472,7 +511,6 @@ Many participants (n=26, 52%) described chicken keeping as connecting them to fa
 Chicken keeping frequently represented an expression of environmental and ethical values:
 
 > "It's living my values around humane animal treatment, reducing my carbon footprint, and stepping outside the industrial food system, even if in a small way." (Participant 47, Pacific Northwest)
-
 
 # Discussion
 The findings of this study underscore the economic, environmental, and social benefits of backyard chicken keeping while also highlighting the practical challenges that accompany this practice. Our results provide empirical support for the growing movement toward urban and suburban poultry husbandry, illustrating how households recover their initial investments and experience broader benefits related to sustainability and well-being.
